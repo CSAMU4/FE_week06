@@ -24,11 +24,28 @@ class Card {
     }
 }
 
-// Define Deck class -- establishing what the suit and rank objects are 
+// Define Deck class or object -- establishing what the suit and rank objects are 
 class Deck { 
     constructor() {
         this.cards = []; 
         const suits = ['Hearts', 'Diamonds', 'Clubs', 'Spades']; 
         const ranks = ['2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K', 'A'];
+
+
+// Create a Deck of 52 cards with different suits and rank 
+for (const suit of suits) {
+    for (const rank of ranks) {
+        this.cards.push(new Card(suit,rank)); 
+         }
     }
 }
+// Shuffle the cards in the deck using Fisher-Yates algorithm: 
+shuffle() {
+    for (let i = this.cards.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + i)); 
+        [this.cards[i], this.cards[j]] = [this.cards[j], this.cards[i]];
+        }
+    }
+
+}
+
