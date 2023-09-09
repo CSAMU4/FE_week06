@@ -1,1 +1,2 @@
 # FE_week06
+the final project for week 6 is creating an automated version of the card game WAR. in this version, there are only two players (player 1 and player 2). the program will contain three classes (Card, Deck, Player) and includes their properties and methods. after the cards have been played, the winner will be displayed. lastly, an Unit Test will be runned using Mocha and Chai for at least one of the functions created. 
