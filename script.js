@@ -52,7 +52,7 @@ shuffle() {
 class Player {
     constructor(name) {
         this.name = name; 
-        this.hand = hand; 
+        this.hand = []; 
         this.score = 0; // each player starts with a score of zero 
     }
 
@@ -60,4 +60,17 @@ class Player {
     flip() {
         return this.hand.pop(); 
     }
+}
+
+// Instantiate objects 
+const deck = new Deck(); 
+deck.shuffle(); 
+
+const player1 = new Player('Player 1'); 
+const player2 = new Player('Player 2');
+
+// Deal cards to players 
+for (let i = 0; i < 26; i++) {
+    player1.hand.push(deck.cards.pop());
+    player2.hand.push(deck.cards.pop());
 }
