@@ -86,3 +86,14 @@ for (let i = 0; i < 26; i++) {
         player2.score++;
     }   
 }
+
+// Get the game results and display it 
+
+let resultMessage = ''; 
+if (player1.score > player2.score) {
+    resultMessage = 'Player 1 wins!'; 
+} else if (player2.score > player1.score) {
+    resultMessage = 'Player 2 wins!'
+} else {
+    resultMessage = 'Sorry! It is a tie.'
+}
