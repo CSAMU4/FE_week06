@@ -46,6 +46,18 @@ shuffle() {
         [this.cards[i], this.cards[j]] = [this.cards[j], this.cards[i]];
         }
     }
-
 }
 
+// Define Player class -- a player has a name, hand and score 
+class Player {
+    constructor(name) {
+        this.name = name; 
+        this.hand = hand; 
+        this.score = 0; // each player starts with a score of zero 
+    }
+
+    // Remote and return the top card of the player's hand 
+    flip() {
+        return this.hand.pop(); 
+    }
+}
