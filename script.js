@@ -74,3 +74,15 @@ for (let i = 0; i < 26; i++) {
     player1.hand.push(deck.cards.pop());
     player2.hand.push(deck.cards.pop());
 }
+
+// Playing the game -- comparing cards and updating scores 
+for (let i = 0; i < 26; i++) {
+    const card1 = player1.flip(); 
+    const card2 = player2.flip();
+
+    if (card1.rank > card2.rank) {
+        player1.score++; 
+    } else if (card2.rank > card1.rank) {
+        player2.score++;
+    }   
+}
